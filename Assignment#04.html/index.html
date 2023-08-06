@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+ 
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-color: darkgreen;
+      color: white;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    input[type=text], input[type=email], input[type=tel], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Student Registration Form</h2>
+  <form id="registrationForm" action="#" method="post">
+    <table>
+      <tr>
+        <td><label for="firstName">First Name:</label></td>
+        <td><input type="text" id="firstName" name="firstName" required></td>
+      </tr>
+      <tr>
+        <td><label for="lastName">Last Name:</label></td>
+        <td><input type="text" id="lastName" name="lastName" required></td>
+      </tr>
+      <tr>
+        <td><label for="dob">Date of Birth:</label></td>
+        <td><input type="date" id="dob" name="dob" required></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td><label for="mobile">Mobile Number:</label></td>
+        <td><input type="tel" id="mobile" name="mobile" required></td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" required>
+          <label for="other">Other</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="address">Address:</label></td>
+        <td><input type="text" id="address" name="address" required></td>
+      </tr>
+      <tr>
+        <td><label for="city">City:</label></td>
+        <td><input type="text" id="city" name="city" required></td>
+      </tr>
+      <tr>
+        <td><label for="pincode">Pin Code:</label></td>
+        <td><input type="text" id="pincode" name="pincode" required></td>
+      </tr>
+      <tr>
+        <td><label for="state">State:</label></td>
+        <td><input type="text" id="state" name="state" required></td>
+      </tr>
+      <tr>
+        <td><label for="country">Country:</label></td>
+        <td><input type="text" id="country" name="country" required></td>
+      </tr>
+      <tr>
+        <td><label for="hobbies">Hobbies:</label></td>
+        <td>
+          <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+          <label for="hobby1">Reading</label>
+          <input type="checkbox" id="hobby2" name="hobbies" value="music">
+          <label for="hobby2">Music</label>
+          <input type="checkbox" id="hobby3" name="hobbies" value="sports">
+          <label for="hobby3">Sports</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="qualifications">Qualifications:</label></td>
+        <td>
+          <select id="qualifications" name="qualifications" required>
+            <option value="">Select an option</option>
+            <option value="highschool">High School</option>
+            <option value="diploma">Diploma</option>
+            <option value="bachelors">Bachelor's Degree</option>
+            <option value="masters">Master's Degree</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="course">Course Applied for:</label></td>
+        <td>
+          <select id="course" name="course" required>
+            <option value="">Select an option</option>
+            <option value="cs">Computer Science</option>
+            <option value="it">Information Technology</option>
+            <option value="ai">Artificial Intelligence</option>
+            <option value="webdev">Web Development</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Submit"></td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var dob = document.getElementById("dob").value;
+      var email = document.getElementById("email").value;
+      var mobile = document.getElementById("mobile").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var address = document.getElementById("address").value;
+      var city = document.getElementById("city").value;
+      var pincode = document.getElementById("pincode").value;
+      var state = document.getElementById("state").value;
+      var country = document.getElementById("country").value;
+      var hobbies = document.querySelectorAll('input[name="hobbies"]:checked');
+      var qualifications = document.getElementById("qualifications").value;
+      var course = document.getElementById("course").value;
+
+      if (firstName === "" || lastName === "" || dob === "" || email === "" || mobile === "" || gender === null ||
+          address === "" || city === "" || pincode === "" || state === "" || country === "" || hobbies
+
+</body>
+</html>
